@@ -1,4 +1,4 @@
-Case 1)  How to  spin up  an Ec2  with  local key signed and stored in KMS 
+<h3>How to  spin up  an Ec2  with  local key signed and stored in KMS </h3>
 #generate local pub key 
 ssh-keygen -f terraform_ec2_key
 
