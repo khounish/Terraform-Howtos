@@ -1,8 +1,8 @@
 # Terraform-Howtos
 
 This  Repo is evolving  and i plan to keep basic scripts for references . 
-Prerquisite: 
-<br>User has a linux/wundows bare/virtual/contianer system where from terraform can be launched.<br>
+Prerquisite: <br>
+<br>User has a linux/windows bare/virtual/contianer system where from terraform can be launched.<br>
 <br>Terraform is installed .
 <br>IAM  user has  full permission on EC2.
 <br>One must know Terraform basics such as terraform init,plan,state,apply,destroy.
