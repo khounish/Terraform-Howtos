@@ -1,7 +1,7 @@
 How to  spin up  an Ec2  with  local key signed and stored in KMS 
 #generate local pub key 
 ssh-keygen -f terraform_ec2_key
-
+# create the main.tf file with below content
 provider "aws" {
   access_key = "XXXXXX...."
   secret_key = "XXXXXX......"
