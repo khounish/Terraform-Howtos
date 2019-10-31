@@ -5,7 +5,7 @@ ssh-keygen -f terraform_ec2_key
 provider "aws" {
   access_key = "XXXXXX...."
   secret_key = "XXXXXX......"
-  region     = "eu-west-2"
+  region     = "us-east-1"
 }
 
 #Push The key
