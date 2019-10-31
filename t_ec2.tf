@@ -1,0 +1,36 @@
+Case 1)  How to  spin up  an Ec2  with  local key signed and stored in KMS 
+#generate local pub key 
+ssh-keygen -f terraform_ec2_key
+
+provider "aws" {
+  access_key = "XXXXXX...."
+  secret_key = "XXXXXX......"
+  region     = "eu-west-2"
+}
+
+#Push The key
+resource "aws_key_pair" "terraform_ec2_key" {
+  key_name = "terraform_ec2_key"
+  public_key = "${file("terraform_ec2_key.pub")}"
+}
+
+#Attach to  a Instance while creatin
+resource "aws_instance" "Xubuntu1" {
+  ami           = "ami-6b7f610f"
+  instance_type = "t2.micro"
+  key_name = "terraform_ec2_key"
+}
+
+######How to reuse the same key in KMS for other instance(enable below)
+#provider "aws" {
+#  access_key = "XXXXXX...."
+# secret_key = "XXXXXX......"
+#  region     = "eu-west-2"
+#}
+#Attach to  a Instance while creatin
+#resource "aws_instance" "myubuntu2" {
+#  ami           = "ami-6b7f610f"
+#  instance_type = "t2.micro"
+#  key_name = "terraform_ec2_key"
+#}
+ 
