@@ -1,11 +1,14 @@
-Spin a basic ec2 micro instance 
+#Spin a basic ec2 micro instance 
+
+#create a main.tf with below content 
+
 provider "aws" {
   access_key = "XXXXX..."
   secret_key = "XXXXXXX......"
   region     = "us-east-2"
 }
  
-resource "aws_instance" "ubuntu_zesty" {
+resource "aws_instance" "ubuntu_basic_test" {
   ami           = "ami-6b7f610f"
   instance_type = "t2.micro"
 }
