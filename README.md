@@ -2,9 +2,9 @@
 
 This  Repo is evolving  and i plan to keep basic scripts for references . 
 Prerquisite: 
-User has a linux/wundows bare/virtual/contianer system where from terraform can be launched.
-Terraform is installed .
-IAM  user has  full permission on EC2.
+<br>User has a linux/wundows bare/virtual/contianer system where from terraform can be launched.
+<br>Terraform is installed .
+<br>IAM  user has  full permission on EC2.
 One must know Terraform basics such as terraform init,plan,state,apply,destroy.
 
 Basic Scenarios:
