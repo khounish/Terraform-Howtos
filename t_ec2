@@ -1,0 +1,11 @@
+Spin a basic ec2 micro instance 
+provider "aws" {
+  access_key = "XXXXX..."
+  secret_key = "XXXXXXX......"
+  region     = "us-east-2"
+}
+ 
+resource "aws_instance" "ubuntu_zesty" {
+  ami           = "ami-6b7f610f"
+  instance_type = "t2.micro"
+}
